@@ -15,7 +15,7 @@ public class ProductController : Controller
         _productService = productService;
     }
 
-    [HttpGet("get-product-by-id/{id}")]
+    [HttpGet("get-product/{id}")]
     public IActionResult GetProductById(int id)
     {
         var _product = _productService.GetProductById(id);
@@ -33,6 +33,13 @@ public class ProductController : Controller
     public IActionResult AddProduct([FromBody] ProductDTO product)
     {
         _productService.AddProduct(product);
+        return Ok();
+    }
+
+    [HttpDelete("delete-product/{id}")]
+    public IActionResult DeleteProductById(int id)
+    {
+        _productService.DeleteProductById(id);
         return Ok();
     }
 }

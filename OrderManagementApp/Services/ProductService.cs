@@ -42,4 +42,14 @@ public class ProductService
         _dbContext.Products.Add(_product);
         _dbContext.SaveChanges();
     }
+
+    public void DeleteProductById(int productId)
+    {
+        var _product = _dbContext.Products.FirstOrDefault(p => p.Id == productId);
+        if (_product != null)
+        {
+            _dbContext.Products.Remove(_product);
+            _dbContext.SaveChanges();
+        }
+    }
 }
