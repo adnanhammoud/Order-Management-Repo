@@ -14,18 +14,18 @@ public static class DbSeeder
         // --------------------
         // Customers
         // --------------------
-        var customer1 = new Customer
-        {
-            Name = "Ahmad Hammoud"
-        };
+        // var customer1 = new Customer
+        // {
+        //     Name = "Ahmad Hammoud"
+        // };
+        //
+        // var customer2 = new Customer
+        // {
+        //     Name = "John Doe"
+        // };
 
-        var customer2 = new Customer
-        {
-            Name = "John Doe"
-        };
-
-        context.Customers.Add(customer1);
-        context.Customers.Add(customer2);
+        // context.Customers.Add(customer1);
+        // context.Customers.Add(customer2);
 
         // --------------------
         // Addresses
@@ -69,8 +69,6 @@ public static class DbSeeder
         {
             CreatedAt = DateTime.UtcNow,
             Status = "Pending",
-            Customer = customer1,        // navigation
-            CustomerId = customer1.Id,   // FK (explicit, safe)
             Address = address1,
             TotalAmount = 1250m,
             OrderLines = new List<OrderLine>()
