@@ -14,9 +14,9 @@ public class AppDbContext : DbContext
     {
         
     }
-    DbSet<Order> Orders { get; set; }
-    DbSet<Customer> Customers { get; set; }
-    DbSet<Product> Products { get; set; }
-    DbSet<Address> Addresses { get; set; }
-    DbSet<OrderLine> OrderLines { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Address> Addresses { get; set; }
+    public DbSet<OrderLine> OrderLines { get; set; }
 }
