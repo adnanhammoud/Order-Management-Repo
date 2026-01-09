@@ -1,4 +1,5 @@
 ﻿using OrderManagementApp.DTOs;
+using OrderManagementApp.Migrations;
 using OrderManagementApp.Models;
 
 namespace OrderManagementApp.Services;
@@ -20,7 +21,7 @@ public class OrderService
     {
         var _order = new Order
         {
-            CreatedAt = DateTime.Now,
+            CreatedAt = DateTime.UtcNow,
             Status = "Pending",
             BuyerName = order.BuyerName,
             Address = new Address
@@ -33,7 +34,7 @@ public class OrderService
             },
             OrderLines = new List<OrderLine>()
         };
-        int sum = 0;
+        decimal sum = 0;
         foreach (var line in order.OrderLines)
         {
             var product = _dbContext.Products.First(p => p.Id == line.ProductId);
@@ -48,7 +49,7 @@ public class OrderService
                 Quantity = line.Quantity,
                 TotalPrice = totalPrice
             });
-            sum += line.Quantity;
+            sum += totalPrice;
         }
 
         _order.TotalAmount = sum;
@@ -57,6 +58,17 @@ public class OrderService
         _dbContext.SaveChanges();
 
         return _order;
+    }
+
+    public void DelteOrderById(int orderId)
+    {
+        var order = _dbContext.Orders.First(o => o.Id == orderId);
+        if (order == null)
+        {
+            return;
+        }
+        _dbContext.Orders.Remove(order);
+        _dbContext.SaveChanges();
     }
 
 }   

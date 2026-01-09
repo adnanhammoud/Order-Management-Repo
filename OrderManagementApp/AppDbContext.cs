@@ -12,7 +12,16 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
+        modelBuilder.Entity<Order>()
+            .HasMany(ol => ol.OrderLines)
+            .WithOne(ol => ol.Order)
+            .HasForeignKey(ol => ol.OrderId)
+            .HasPrincipalKey(ol => ol.Id)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Product>()
+            .HasMany(ol => ol.ProductCategories)
+            .WithMany(p => p.Products);
     }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Product> Products { get; set; }

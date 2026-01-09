@@ -22,4 +22,11 @@ public class OrderController : Controller
         _orderService.CreateOrder(order);
         return Ok();
     }
+
+    [HttpDelete("delete-order/{id}")]
+    public IActionResult DeleteOrder(int id)
+    {
+        _orderService.DelteOrderById(id);
+        return Ok();
+    }
 }
