@@ -62,7 +62,7 @@ public class OrderService
         return _order;
     }
 
-    // public OrderDTO GetOrderById(int id)
+    // public Order GetOrderById(int id)
     // {
     //     List<OrderLineDTO> orderLines = new List<OrderLineDTO>();
     //     var order = _dbContext.Orders.First(o => o.Id == id);
