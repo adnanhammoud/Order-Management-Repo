@@ -62,6 +62,25 @@ public class OrderService
         return _order;
     }
 
+    // public OrderDTO GetOrderById(int id)
+    // {
+    //     List<OrderLineDTO> orderLines = new List<OrderLineDTO>();
+    //     var order = _dbContext.Orders.First(o => o.Id == id);
+    //     return new OrderDTO()
+    //     {
+    //         BuyerName = order.BuyerName,
+    //         Address = new AddressDTO()
+    //         {
+    //             Line1 = order.Address.Line1,
+    //             Line2 = order.Address.Line2,
+    //             City = order.Address.City,
+    //             State = order.Address.State,
+    //             CountryCode = order.Address.CountryCode
+    //         },
+    //         OrderLines = order.OrderLines.To,
+    //     };
+    // }
+
     public void DelteOrderById(int orderId)
     {
         var order = _dbContext.Orders.First(o => o.Id == orderId);
