@@ -34,6 +34,8 @@ public class OrderService
             },
             OrderLines = new List<OrderLine>()
         };
+        
+        // n queries, query the lines then iterate over the list they are stored in.
         decimal sum = 0;
         foreach (var line in order.OrderLines)
         {
