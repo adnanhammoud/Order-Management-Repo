@@ -1,14 +1,15 @@
-﻿using OrderManagementApp.Models;
+﻿using OrderManagementApp.DTOs;
+using OrderManagementApp.Models;
 
 namespace OrderManagementApp.Application.Repositories;
 
 public interface IProductRepository
 {
-    public Product GetProductById(int productId);
+    public ProductDTO GetProductById(int productId);
     
-    public List<Product> GetProducts();
+    public List<ProductDTO> GetAllProducts();
     
-    public void AddProduct(Product product);
+    public void AddProduct(ProductDTO product);
     
     public void DeleteProductById(int productId);
 }
