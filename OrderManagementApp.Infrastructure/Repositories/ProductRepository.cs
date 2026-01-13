@@ -1,4 +1,5 @@
-﻿using OrderManagementApp.Application.Repositories;
+﻿using OrderManagementApp.Application.Mappings;
+using OrderManagementApp.Application.Repositories;
 using OrderManagementApp.DTOs;
 using OrderManagementApp.Models;
 
@@ -9,28 +10,16 @@ public class ProductRepository : IProductRepository
     private readonly AppDbContext _dbContext;
     public ProductDTO GetProductById(int productId)
     {
-        var product = _dbContext.Products.Where(p => p.Id == productId).Select(product => new ProductDTO()
-        {
-            Name = product.Name,
-            Price = product.Price,
-            Description = product.Description,
-            Sku = product.Sku,
-        }).FirstOrDefault();
-    
-        return product;
+        var product = _dbContext.Products.Where(p => p.Id == productId).First();
+        var mapper = new ProductMapper();
+        return mapper.ToProductDto(product);
     }
 
     public List<ProductDTO> GetAllProducts()
     {
-        var _products = _dbContext.Products.Select(product => new ProductDTO()
-        {
-            Name = product.Name,
-            Price = product.Price,
-            Description = product.Description,
-            Sku = product.Sku,
-        }).ToList();
-        
-        return _products;
+        var products = _dbContext.Products.ToList();
+        var mapper = new ProductMapper();
+        return mapper.ToProductDtos(products);
     }
 
     public void AddProduct(ProductDTO product)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XXIqc0Sefic=",
+  "dgSpecHash": "gjdM5E3aws8=",
   "success": true,
   "projectFilePath": "E:\\Inmind .ai\\AnyFleet\\OrderManagementApp\\OrderManagementApp\\OrderManagementApp.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\npgsql\\9.0.1\\npgsql.9.0.1.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.1\\npgsql.entityframeworkcore.postgresql.9.0.1.nupkg.sha512",
+    "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\riok.mapperly\\5.0.0-next.0\\riok.mapperly.5.0.0-next.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\swashbuckle.aspnetcore\\10.1.0\\swashbuckle.aspnetcore.10.1.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.1.0\\swashbuckle.aspnetcore.swagger.10.1.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.0\\swashbuckle.aspnetcore.swaggergen.10.1.0.nupkg.sha512",
@@ -53,12 +54,5 @@
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://pkgs.dev.azure.com/inmindai/_packaging/inmindai/nuget/v3/index.json."
-    }
-  ]
+  "logs": []
 }

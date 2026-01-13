@@ -720,6 +720,22 @@
           }
         }
       },
+      "Riok.Mapperly/5.0.0-next.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/Riok.Mapperly.targets": {}
+        }
+      },
       "Swashbuckle.AspNetCore/10.1.0": {
         "type": "package",
         "dependencies": {
@@ -1015,7 +1031,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "OrderManagementApp.Domain": "1.0.0"
+          "OrderManagementApp.Domain": "1.0.0",
+          "Riok.Mapperly": "5.0.0-next.0"
         },
         "compile": {
           "bin/placeholder/OrderManagementApp.Application.dll": {}
@@ -1027,6 +1044,9 @@
       "OrderManagementApp.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Riok.Mapperly": "5.0.0-next.0"
+        },
         "compile": {
           "bin/placeholder/OrderManagementApp.Domain.dll": {}
         },
@@ -2808,6 +2828,30 @@
         "postgresql.png"
       ]
     },
+    "Riok.Mapperly/5.0.0-next.0": {
+      "sha512": "JlFu0r/n+fp5/z9BM9EvQXr0SzUdifRzl2zYYJ38S+pA5p6A4wRBLTUoTMDIEis1x/Ga5dIyaPs0P6ZkQa2+NQ==",
+      "type": "package",
+      "path": "riok.mapperly/5.0.0-next.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.11/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.14/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn4.8/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn4.8/dotnet/cs/Riok.Mapperly.dll",
+        "analyzers/roslyn5.0/dotnet/cs/Riok.Mapperly.Abstractions.dll",
+        "analyzers/roslyn5.0/dotnet/cs/Riok.Mapperly.dll",
+        "build/Riok.Mapperly.targets",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll",
+        "lib/netstandard2.0/Riok.Mapperly.Abstractions.xml",
+        "logo.png",
+        "riok.mapperly.5.0.0-next.0.nupkg.sha512",
+        "riok.mapperly.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/10.1.0": {
       "sha512": "CvOffaJKStoP0hdfCIX4V/9wuwRkSOJd+PehGo/Y5ALh0WYliLwuMlyh1BbgG7uQtJNe1k5P7QIhIaFfZ/aJAw==",
       "type": "package",
@@ -3291,6 +3335,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.1",
       "OrderManagementApp.Application >= 1.0.0",
+      "Riok.Mapperly >= 5.0.0-next.0",
       "Swashbuckle.AspNetCore >= 10.1.0"
     ]
   },
@@ -3362,6 +3407,10 @@
             "target": "Package",
             "version": "[9.0.1, )"
           },
+          "Riok.Mapperly": {
+            "target": "Package",
+            "version": "[5.0.0-next.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[10.1.0, )"
@@ -3389,13 +3438,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://pkgs.dev.azure.com/inmindai/_packaging/inmindai/nuget/v3/index.json."
-    }
-  ]
+  }
 }
