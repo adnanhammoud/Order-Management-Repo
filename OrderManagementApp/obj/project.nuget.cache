@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cOKjtctiPOk=",
+  "dgSpecHash": "XXIqc0Sefic=",
   "success": true,
   "projectFilePath": "E:\\Inmind .ai\\AnyFleet\\OrderManagementApp\\OrderManagementApp\\OrderManagementApp.csproj",
   "expectedPackageFiles": [
@@ -53,5 +53,12 @@
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\Adnan-Hammoud\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://pkgs.dev.azure.com/inmindai/_packaging/inmindai/nuget/v3/index.json."
+    }
+  ]
 }
